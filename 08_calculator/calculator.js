@@ -20,7 +20,12 @@ const sum = function() {
 };
 
 const multiply = function() {
-
+  const numArray = arguments[0];
+  let multiply = 1;
+  numArray.forEach(num => {
+    multiply *= num;
+  });
+  return multiply;
 };
 
 const power = function() {
