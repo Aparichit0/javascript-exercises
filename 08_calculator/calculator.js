@@ -11,7 +11,12 @@ const subtract = function() {
 };
 
 const sum = function() {
-	
+  const numArray = arguments[0];
+  let sum = 0;
+  numArray.forEach(num => {
+    sum += num;
+  });
+  return sum;
 };
 
 const multiply = function() {
