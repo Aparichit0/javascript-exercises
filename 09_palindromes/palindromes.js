@@ -1,5 +1,5 @@
 const palindromes = function () {
-    const textArray = arguments[0].split("");
+    const textArray = arguments[0].toLowerCase().split("");
     //ignore punctuation
     const filterArray = [];
     const ignoreArray = ['!', '.', ','];
