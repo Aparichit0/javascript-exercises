@@ -39,7 +39,12 @@ const power = function() {
 };
 
 const factorial = function() {
-	
+  const num = arguments[0];
+  let factorialNum = 1;
+  for (let i = 0; i < num; i++){
+   factorialNum *= (num - i);
+  }
+  return factorialNum;
 };
 
 // Do not edit below this line
