@@ -29,7 +29,13 @@ const multiply = function() {
 };
 
 const power = function() {
-	
+	const num = arguments[0];
+  const power = arguments[1];
+  let poweredNum = 1;
+  for (let i = 0; i < power; i++){
+    poweredNum *= num;
+  };
+  return poweredNum;
 };
 
 const factorial = function() {
