@@ -3,6 +3,15 @@ const findTheOldest = function () {
     const person = arguments[0];
     const age = [];
     let olderPerson;
+    const currentDate = new Date();
+    for (i = 0; i < person.length; i++) {
+        if (!person[i].yearOfDeath) {
+            //for currently alive person
+            age[i] = currentDate.getFullYear() - person[i].yearOfBirth;
+        } else {
+            age[i] = person[i].yearOfDeath - person[i].yearOfBirth;
+        };
+    };
     for (i = 0; i < age.length; i++) {
         //compare nearby person's age
         if (age[i + 1]) {
