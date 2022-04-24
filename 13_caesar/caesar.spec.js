@@ -6,7 +6,7 @@ test('works with single letters', () => {
 test('works with words', () => {
   expect(caesar('Aaa', 1)).toBe('Bbb');
 });
-test.skip('works with phrases', () => {
+test('works with phrases', () => {
   expect(caesar('Hello, World!', 5)).toBe('Mjqqt, Btwqi!');
 });
 test.skip('works with negative shift', () => {
