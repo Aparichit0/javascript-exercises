@@ -7,9 +7,16 @@ const caesar = function (str, shiftFactor) {
         let charIndex = charCode + shiftFactor;
 
         if (AToZ || aToz) {
-            if ((90 < charIndex && charIndex <= 96) || 122 < charIndex) charIndex -= 26;
+            //postive shift balance
+            if (AToZ && charIndex <= 64) charIndex += 26;
+            if (aToz && charIndex <= 96) charIndex += 26;
+            //negative shift balance
+            if (AToZ && 90 < charIndex) charIndex -= 26;
+            if (aToz && 122 < charIndex) charIndex -= 26;
+            //alphabatic character shift
             shiftStr += String.fromCharCode(charIndex);
         } else {
+            //skip non-alphabatic charcters
             shiftStr += str.charAt(i);
         };
     };
