@@ -1,5 +1,7 @@
 const caesar = function (str, shiftFactor) {
     let shiftStr = "";
+    //large shift rounding
+    shiftFactor = shiftFactor % 26;
     for (let i = 0; i < str.length; i++) {
         let charCode = str.charCodeAt(i);
         let AToZ = 64 < charCode && charCode <= 90;
