@@ -1,7 +1,9 @@
 const caesar = function (str, shiftFactor) {
     let shiftStr = "";
-    let CharCode = str.charCodeAt(0);
-    shiftStr += String.fromCharCode(CharCode + shiftFactor);
+    for (let i = 0; i < str.length; i++) {
+        let CharCode = str.charCodeAt(i);
+        shiftStr += String.fromCharCode(CharCode + shiftFactor);
+    }
     return shiftStr;
 };
 
